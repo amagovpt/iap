@@ -1,0 +1,75 @@
+swagger: '2.0'
+info:
+  description: 'Esta API tem o objetivo de gerar um ID único para ser usado para chamar as outras APIS no envio de informação estatística ou de retorno de informação para um intervalo de referência.Amtes de invocar as restantes APIS devemos invocar esta API para gerar o número único primeiro.'
+  version: 1.0.0
+  title: "SDG - uniqueId"
+  termsOfService: 'https://www.ama.gov.pt/web/agencia-para-a-modernizacao-administrativa/politica-de-privacidade'
+  contact:
+    email: "sdgportugal@ama.pt"
+host: "servicos.gov.pt"
+
+
+schemes:
+  - "https"
+paths:
+  /uniqueId:
+    get:
+      tags:
+      - "obter id"
+      summary: "Obter um  identificado único id para uso nas apis da SDG."
+      description: "Esta operação tem como objetivo disponibilzar um id único que poderá ser utilizado ao invocar outras apis da SDG."
+      produces:
+      - "application/json"
+      responses:
+        '200':
+          description: "Operação realizada com sucesso"
+          schema:
+            $ref: '#/definitions/ApiResponseSuccess'
+        '500':
+          description: "Erro"
+          schema:
+            $ref: '#/definitions/ApiResponseError'
+
+definitions:
+  ApiResponseSuccess:
+    type: "object"
+    properties:
+      unique-id:
+        type: "string"
+        example: "b4bc555f-3fbf-4757-b57c-c58d4e7f24fd"
+
+  ValidateResponseSuccess:
+    type: "object"
+    properties:
+      unique-id:
+        type: "string"
+        example: "valid"
+
+
+  ApiResponseError:
+    type: "object"
+    properties:
+      ERROR_CODE:
+        type: "integer"
+        format: "int32"
+      errorDescription:
+        type: "string"
+        example: ""
+      STATUS_CODE:
+        type: "integer"
+        example: 500
+      message:
+        type: "string"
+        example: ""
+      ERROR_MESSAGE:
+        type: "string"
+        example: ""
+      ERROR_DETAIL:
+        type: "string"
+        example: ""
+      ERROR_EXCEPTION:
+        type: "string"
+        example: ""
+externalDocs:
+  description: "Encontre mais sobre o serviços em"
+  url: 'https://amagovpt.github.io/servicos-digitais/'

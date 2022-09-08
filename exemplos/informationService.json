@@ -1,0 +1,63 @@
+{
+  "isSDG": true,
+  "content": [
+    {
+      "uniqueId": "123456789",
+      "referencePeriod": {
+        "startDate": "2020-01-01 00:00:00",
+        "endDate": "2020-01-31 00:00:00"
+      },
+      "transferDate": "2020-02-01 00:00:00",
+      "transferType": "API",
+      "nbEntries": 1,
+      "sources": [
+        {
+          "source": {
+            "sourceUrl": "http://www1.ipq.pt/PT/IPQ/Pages/IPQ.aspx",
+            "statistics": [
+              {
+                "deviceType": "Mobile",
+                "nbVisits": 1,
+                "originatingCountry": "TR"
+              },
+              {
+                "deviceType": "PC",
+                "nbVisits": 1,
+                "originatingCountry": "IQ"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "uniqueId": "987654321",
+      "referencePeriod": {
+        "startDate": "2020-02-01 00:00:00",
+        "endDate": "2020-02-29 00:00:00"
+      },
+      "transferDate": "2020-03-01 00:00:00",
+      "transferType": "API",
+      "nbEntries": 1,
+      "sources": [
+        {
+          "source": {
+            "sourceUrl": "http://www1.ipq.pt/PT/IPQ/Pages/IPQ.aspx",
+            "statistics": [
+              {
+                "deviceType": "Mobile",
+                "nbVisits": 1,
+                "originatingCountry": "TR"
+              },
+              {
+                "deviceType": "Tablet",
+                "nbVisits": 1,
+                "originatingCountry": "RS"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

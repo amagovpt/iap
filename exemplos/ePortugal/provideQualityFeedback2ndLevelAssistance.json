@@ -1,0 +1,16 @@
+{
+          "feedback": {
+	    "serviceCode":"",
+            "entityCode":"",
+	    "isSDG": true,
+            "category": "Assistance",
+            "source": "https://eportugal.gov.pt/en/inicio/espaco-empresa",
+            "survey": {
+              "clearOffer": 1,
+              "delays": "Yes",
+              "easiness": 5,
+              "onlinePayment": "Irrelevant",
+              "responsiveness": 2
+            }
+          }
+}

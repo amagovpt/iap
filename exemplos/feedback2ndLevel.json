@@ -1,0 +1,74 @@
+{
+  "isSDG": true,
+  "content": [
+    {
+      "uniqueId": "123456789",
+      "referencePeriod": {
+        "startDate": "2020-01-01 00:00:00",
+        "endDate": "2020-01-31 00:00:00"
+      },
+      "transferDate": "2020-02-01 00:00:00",
+      "transferType": "API",
+      "nbEntries": 2,
+      "feedbacks": [
+        {
+          "feedback": {
+            "category": "Assistance",
+            "source": "https://eportugal.gov.pt/en/inicio/espaco-empresa",
+            "survey": {
+              "clearOffer": 1,
+              "delays": "Yes",
+              "easiness": 5,
+              "onlinePayment": "Irrelevant",
+              "responsiveness": 2
+            }
+          }
+        },
+        {
+          "feedback": {
+            "category": "Procedure",
+            "source": "http://www.sist.si/contact-point/information",
+            "survey": {
+              "complianceEvidence": "Irrelevant",
+              "easiness": 2,
+              "englishAvailability": "No",
+              "nationalAuthentication": "Irrelevant",
+              "onlinePayment": "Irrelevant"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "uniqueId": "98765321",
+      "referencePeriod": {
+        "startDate": "2020-02-01 00:00:00",
+        "endDate": "2020-02-29 00:00:00"
+      },
+      "transferDate": "2020-03-01 00:00:00",
+      "transferType": "Manual",
+      "nbEntries": 2,
+      "feedbacks": [
+        {
+          "feedback": {
+            "category": "Information",
+            "source": "https://www.bbl.admin.ch/bbl/fr/home/themen/fachbereich-bauprodukte/produkteinformationsstelle.html",
+            "survey": {
+              "accuracy": 1,
+              "clarity": 1,
+              "comprehensiveness": 5,
+              "easyFinding": 1,
+              "englishAvailability": "Unknown",
+              "lastUpdate": "Unknown",
+              "legalActs": "Irrelevant",
+              "ownership": "Yes",
+              "structure": 4,
+              "upToDate": 2,
+              "userFriendliness": 2
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

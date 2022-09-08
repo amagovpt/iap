@@ -1,0 +1,150 @@
+swagger: '2.0'
+info:
+  description: 'Este é um serviço disponibilizado pela AMA que fornece interoperabilidade com o Single Digital Gateway (SDG) da Comissão Europeia. Esta API serve para transferir dados recolhidos no feedback de primeiro nível sobre serviços de informação, de assistência, de resolução de problemas ou procedimentos online.'
+  version: 1.0.0
+  title: "SDG - feedback1stLevel"
+  termsOfService: 'https://www.ama.gov.pt/web/agencia-para-a-modernizacao-administrativa/politica-de-privacidade'
+  contact:
+    email: "sdgportugal@ama.pt"
+host: "servicos.gov.pt"
+
+
+schemes:
+  - "https"
+paths:
+  /feedback1stLevel:
+    post:
+      tags:
+      - "Enviar feedback 1º Nível"
+      summary: "Enviar feedbacks de primeiro nível sobre serviços de informação, de assistência, de resolução de problemas ou procedimentos online."
+      description: "Esta operação deve ser usada para enviar feedbacks de primeiro nível sobre serviços de informação, de assistência, de resolução de problemas ou procedimentos online."
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        description: "O `Content-Type` é uma informação que deve obrigatoriamente ser configurada no Header da mensagem."
+        required: true
+        type: "string"
+        enum:
+        - "application/json"
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+          $ref: '#/definitions/feedback1stLevelSchema'
+      responses:
+        '200':
+          description: "Operação realizada com sucesso"
+          schema:
+            $ref: '#/definitions/ApiResponseSuccess'
+        '500':
+          description: "Erro"
+          schema:
+            $ref: '#/definitions/ApiResponseError'
+
+definitions:
+  ApiResponseSuccess:
+    type: "object"
+    properties:
+      codeResult:
+        type: "string"
+        example: "0"
+      message:
+        type: "string"
+        example: "Mensagem recebida e guardada com sucesso"
+      messageGuid:
+        type: "string"
+        example: "b4bc555f-3fbf-4757-b57c-c58d4e7f24fd"
+      httpStatusCode:
+        type: "string"
+        example: "200"
+      messageDetail:
+        type: "string"
+        example: ""
+
+  feedback1stLevelSchema:
+    type: "object"
+    properties:
+      isSDG:
+        type: "boolean"
+      content:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            uniqueId:
+              type: "string"
+              example: "123456789"
+            referencePeriod:
+              type: "object"
+              properties:
+                startDate:
+                  type: "string"
+                  example: "2020-01-01 00:00:00"
+                endDate:
+                  type: "string"
+                  example: "2020-01-31 00:00:00"
+            transferDate:
+              type: "string"
+              example: "2020-02-01 00:00:00"
+            transferType:
+              type: "string"
+              example: "API"
+            nbEntries:
+              type: "integer"
+              example: 1000
+            feedbacks:
+              type: "array"
+              items:
+                type: "object"
+                properties:
+                  feedback:
+                    type: "object"
+                    properties:
+                      category:
+                        type: "string"
+                        example: "Procedure"
+                      rating:
+                        type: "integer"
+                        example: 1
+                      source:
+                        type: "string"
+                        example: "www.konsumenteuropa.se"
+                      foundInformation:
+                        type: "string"
+                        example: "Yes"
+                      helpUsImprove:
+                        type: "string"
+                        example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+
+
+  ApiResponseError:
+    type: "object"
+    properties:
+      ERROR_CODE:
+        type: "integer"
+        format: "int32"
+      errorDescription:
+        type: "string"
+        example: ""
+      STATUS_CODE:
+        type: "integer"
+        example: 500
+      message:
+        type: "string"
+        example: ""
+      ERROR_MESSAGE:
+        type: "string"
+        example: ""
+      ERROR_DETAIL:
+        type: "string"
+        example: ""
+      ERROR_EXCEPTION:
+        type: "string"
+        example: ""
+externalDocs:
+  description: "Encontre mais sobre o serviços em "
+  url: 'https://amagovpt.github.io/servicos-digitais/'
