@@ -1,0 +1,121 @@
+swagger: '2.0'
+info:
+  description: 'Este é um serviço disponibilizado pela AMA que fornece interoperabilidade com o Single Digital Gateway (SDG) da Comissão Europeia. Esta API serve para enviar um único feedback de primeiro nível.'
+  version: 1.0.0
+  title: "SDG - provideQualityFeedback1stLevel"
+  termsOfService: 'https://www.ama.gov.pt/web/agencia-para-a-modernizacao-administrativa/politica-de-privacidade'
+  contact:
+    email: "apiteam@ama.pt"
+host: "esb.ama.lan"
+
+
+schemes:
+  - "https"
+  - "http"
+paths:
+  /provideQualityFeedback1stLevel:
+    post:
+      tags:
+      - "Enviar feedbacks"
+      summary: "Enviar feedback de primeiro nível"
+      description: "Esta operação deve ser usada para enviar um único feedback de primeiro nível."
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        description: "O `Content-Type` é uma informação que deve obrigatoriamente ser configurada no Header da mensagem."
+        required: true
+        type: "string"
+        enum:
+        - "application/json"
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+          $ref: '#/definitions/provideQualityFeedback1stLevelSchema'
+      responses:
+        '200':
+          description: "Operação realizada com sucesso"
+          schema:
+            $ref: '#/definitions/ApiResponseSuccess'
+        '500':
+          description: "Erro"
+          schema:
+            $ref: '#/definitions/ApiResponseError'
+
+definitions:
+  ApiResponseSuccess:
+    type: "object"
+    properties:
+      codeResult:
+        type: "string"
+        example: "0"
+      message:
+        type: "string"
+        example: "Mensagem recebida e guardada com sucesso"
+      messageGuid:
+        type: "string"
+        example: "b4bc555f-3fbf-4757-b57c-c58d4e7f24fd"
+      httpStatusCode:
+        type: "string"
+        example: "200"
+      messageDetail:
+        type: "string"
+        example: ""
+
+  provideQualityFeedback1stLevelSchema:
+    type: "object"
+    properties:
+      feedback:
+        type: "object"
+        properties:
+          isSDG:
+            type: "boolean"
+          category:
+            type: "string"
+            example: "Information"
+          rating:
+            type: "integer"
+            example: 2
+          source:
+            type: "string"
+            example: "http://www.amsfl.li/"
+          foundInformation:
+            type: "string"
+            example: "Partly"
+          helpUsImprove:
+            type: "string"
+            example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      
+
+
+  ApiResponseError:
+    type: "object"
+    properties:
+      ERROR_CODE:
+        type: "integer"
+        format: "int32"
+      errorDescription:
+        type: "string"
+        example: ""
+      STATUS_CODE:
+        type: "integer"
+        example: 500
+      message:
+        type: "string"
+        example: ""
+      ERROR_MESSAGE:
+        type: "string"
+        example: ""
+      ERROR_DETAIL:
+        type: "string"
+        example: ""
+      ERROR_EXCEPTION:
+        type: "string"
+        example: ""
+externalDocs:
+  description: "Encontre mais sobre o serviços da AMA em"
+  url: 'http://www.ama.gov.pt'
