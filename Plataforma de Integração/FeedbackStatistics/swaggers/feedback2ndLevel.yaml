@@ -1,0 +1,201 @@
+openapi: '3.0.0'
+info:
+  description: 'Este é um serviço disponibilizado pela AMA que fornece interoperabilidade com o Single Digital Gateway (SDG) da Comissão Europeia. Esta API serve para transferir dados recolhidos no feedback de segundo nível.'
+  version: 1.0.0
+  title: "SDG - feedback2ndLevel"
+  termsOfService: 'https://www.ama.gov.pt/web/agencia-para-a-modernizacao-administrativa/politica-de-privacidade'
+  contact:
+    email: "apiteam@ama.pt"
+
+paths:
+  /feedback2ndLevel:
+    post:
+      tags:
+      - "Enviar feedbacks"
+      summary: "Enviar feedbacks de segundo nível"
+      description: "Esta operação deve ser usada para enviar feedbacks de de segundo nível. O header `Content-Type` deverá obrigatoriamente ter o valor `application/json`."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/feedback2ndLevelSchema'
+      responses:
+        '200':
+          description: "Operação realizada com sucesso"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseSuccess'
+        '500':
+          description: "Erro"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseError'
+
+components:
+  schemas:
+    feedback2ndLevelSchema:
+      type: "object"
+      properties:
+        isSDG:
+          type: "boolean"
+        content:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              uniqueId:
+                type: "string"
+                example: "123456789"
+              referencePeriod:
+                type: "object"
+                properties:
+                  startDate:
+                    type: "string"
+                    example: "2020-01-01 00:00:00"
+                  endDate:
+                    type: "string"
+                    example: "2020-01-31 00:00:00"
+              transferDate:
+                type: "string"
+                example: "2020-02-01 00:00:00"
+              transferType:
+                type: "string"
+                example: "API"
+              nbEntries:
+                type: "integer"
+                example: 1000
+              feedbacks:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    feedback:
+                      type: "object"
+                      properties:
+                        category:
+                          type: "string"
+                          example: "Assistance"
+                        source:
+                          type: "string"
+                          example: "www.konsumenteuropa.se"
+                        survey:
+                          oneOf:
+                            - type: "object"
+                              properties:
+                                clearOffer:
+                                  type: "integer"
+                                  example: 1
+                                delays:
+                                  type: "string"
+                                  example: "Yes"
+                                easiness:
+                                  type: "integer"
+                                  example: 5
+                                onlinePayment:
+                                  type: "string"
+                                  example: "Irrelevant"
+                                responsiveness:
+                                  type: "integer"
+                                  example: 2
+                            - type: "object"
+                              properties:
+                                complianceEvidence:
+                                  type: "string"
+                                  example: "Irrelevant"
+                                easiness:
+                                  type: "integer"
+                                  example: 2
+                                englishAvailability:
+                                  type: "integer"
+                                  example: "No"
+                                nationalAuthentication:
+                                  type: "string"
+                                  example: "Irrelevant"
+                                onlinePayment:
+                                  type: "string"
+                                  example: "Irrelevant"
+                            - type: "object"
+                              properties:
+                                accuracy:
+                                  type: "integer"
+                                  example: 1
+                                clarity:
+                                  type: "integer"
+                                  example: 1
+                                comprehensiveness:
+                                  type: "integer"
+                                  example: 5
+                                easyFinding:
+                                  type: "integer"
+                                  example: 1
+                                englishAvailability:
+                                  type: "string"
+                                  example: "Unknown"
+                                lastUpdate:
+                                  type: "string"
+                                  example: "Unknown"
+                                legalActs:
+                                  type: "string"
+                                  example: "Irrelevant"
+                                ownership:
+                                  type: "string"
+                                  example: "Yes"
+                                structure:
+                                  type: "integer"
+                                  example: 4
+                                upToDate:
+                                  type: "integer"
+                                  example: "2"
+                                userFriendliness:
+                                  type: "integer"
+                                  example: 2
+    ApiResponseSuccess:
+      type: "object"
+      properties:
+        codeResult:
+          type: "string"
+          example: "0"
+        message:
+          type: "string"
+          example: "Mensagem recebida e guardada com sucesso"
+        messageGuid:
+          type: "string"
+          example: "b4bc555f-3fbf-4757-b57c-c58d4e7f24fd"
+        httpStatusCode:
+          type: "string"
+          example: "200"
+        messageDetail:
+          type: "string"
+          example: ""
+    ApiResponseError:
+      type: "object"
+      properties:
+        ERROR_CODE:
+          type: "integer"
+          format: "int32"
+        errorDescription:
+          type: "string"
+          example: ""
+        STATUS_CODE:
+          type: "integer"
+          example: 500
+        message:
+          type: "string"
+          example: ""
+        ERROR_MESSAGE:
+          type: "string"
+          example: ""
+        ERROR_DETAIL:
+          type: "string"
+          example: ""
+        ERROR_EXCEPTION:
+          type: "string"
+          example: ""
+
+  
+externalDocs:
+  description: "Encontre mais sobre o serviços da AMA em"
+  url: 'http://www.ama.gov.pt'

@@ -1,0 +1,22 @@
+{
+          "feedback": {
+	    "serviceCode":"",
+            "entityCode":"",
+            "isSDG": true,
+            "category": "Information",
+            "source": "https://www.bbl.admin.ch/bbl/fr/home/themen/fachbereich-bauprodukte/produkteinformationsstelle.html",
+            "survey": {
+              "accuracy": 1,
+              "clarity": 1,
+              "comprehensiveness": 5,
+              "easyFinding": 1,
+              "englishAvailability": "Unknown",
+              "lastUpdate": "Unknown",
+              "legalActs": "Irrelevant",
+              "ownership": "Yes",
+              "structure": 4,
+              "upToDate": 2,
+              "userFriendliness": 2
+            }
+          }
+ }
