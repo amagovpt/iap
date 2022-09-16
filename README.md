@@ -19,9 +19,12 @@ A iAP consiste numa plataforma central orientada a serviços e tem por objectivo
 A iAP - Interoperabilidade na Administração Pública O objectivo é permitir, de um modo centralizado, a interligação dos sistemas da Administração Pública e também a composição e disponibilização de serviços electrónicos multicanal mais próximos das necessidades dos utilizadores.
 
 A quem se destina
+
+
 O Serviço de Integração permite a Administração Pública principalmente a Organismos e entidades da Administração pública, tem vindo a ser possível alargar a área de actuação a todas as Entidades Privadas que demonstrem interesse na utilização deste serviço devidamente suportados por suporte legal.
 
 Benefícios
+
 Criar mecanismos de autenticação forte e gestão de identidade para, de uma forma segura, facilitarem a identificação do Cidadão perante os Entidades que se encontram integradas na Plataforma de Interoperabilidade. Este objectivo é atingido recorrendo ao Fornecedor de Autenticação;
 Permitir de forma fácil e integrada a disponibilização de serviços electrónicos transversais centrados no Cidadão;
 Garantir ao Cidadão e à Administração Pública a privacidade, confidencialidade e segurança dos dados;
@@ -35,18 +38,27 @@ Serviços
 Transformação – permite a transformação de diferentes dados e estruturas noutro formato de informação ou formatação à medida das necessidades pretendidas;
 Orquestração -  permite implementar facilmente processos de negócios de forma coordenada e integrada utilizando a linguagem BPEL (Business Process Execution Language), permitindo mapear e organizar o fluxo de troca de dados entre webservices;
 Transmissão\Comunicação – Transmissão de dados usando protocolo SOAP em XML e REST em json. Possibilidade de ter serviços síncronos ou assíncronos (utilizando WS-Addressing).
+
+
 Custos
+
+
 Os custos que venham a existir destinam-se a cobrir as despesas de manutenção da Plataforma de Interoperabilidade e assegurar o cumprimento dos níveis de serviço contratualizados com as entidades aderentes, sendo que cada serviço (Plataforma de Integração, Plataforma de Pagamentos e Gateway de MENSAGENS) tem associados custos diferentes.
 
 
 Plataforma de Mensagens - GAP​​​
+
+
 O que é
+
 É o serviço que permite o envio e recepção de SMS, através de números curtos e longos, entre os cidadãos e os Organismos da Administração Pública, alargando o número de canais de contacto disponíveis para a gestão do relacionamento com os cidadãos.
 
 A quem se destina
+
 A Gateway de mensagens da Administração Pública destina-se em exclusivo a Organismos e entidades da Administração Pública.
 
 Benefícios
+
 Tem como maior benefício agilizar a comunicação entre os Organismos da Administração Pública e aproximar o contacto dos utentes particulares ou empresas;
 Alargamento do número de canais de contacto disponíveis para a gestão do relacionamento com os cidadãos;
 O SMS é um canal de acesso universal, ao qual qualquer cidadão tem acesso;
@@ -62,7 +74,9 @@ O serviço de mensagens apresenta um custo de utilização baseado no volume de 
 De forma simplificada, o custo reflecte a manutenção da infraestrutura e as comunicações No caso do envio de mensagens o encargo varia consoante sejam mensagens nacionais ou internacionais, na receção a variabilidade assenta na utilização de números longos ou curtos e do encargo ser suportado pelo cidadão ou gratuito para o cidadão e suportado pela entidade.
 
 Plataforma de Pagamentos - PPAP
+
 O que é
+
 O serviço de Pagamentos da Administração Pública (PAP) é o sistema que permite a partir dos sistemas de cada organismo, disponibilizar nos seus sites e serviços digitais múltiplos métodos de pagamentos – DUC, VISA, Mastercard, Multibanco, MBWay e Paypal, entre outros, garantindo a gestão, controlo e monitorização dos recebimentos de forma integrada. Está especialmente vocacionada para a prestação de Serviços online por parte das entidades públicas.
 
  
@@ -70,16 +84,20 @@ O serviço de Pagamentos da Administração Pública (PAP) é o sistema que perm
 Desde o fim de 2020 a AMA disponibiliza uma nova plataforma de pagamentos, que vai permitir oferecer mais meios de pagamento para os Cidadãos e Empresas e novos e melhores serviços para as Entidades Públicas.
 
 A quem se destina
+
 O serviço de Pagamentos da Administração Pública destina-se em exclusivo a Organismos e entidades da Administração pública.
 
 Benefícios
+
 Agilizar a promoção, pagamento e execução de serviços digitais para utentes particulares ou empresas;
 Visão integrada sobre os vários métodos de pagamentos disponibilizados, para cada serviço on-line;
 Alargamento do número de canais de pagamento disponíveis e melhor ajustados à comodidade dos cidadãos;
 Facilidade de integração através da reutilização dos WebServices;
 Eficiência financeira;
 Adaptabilidade e reutilização.
+
 Serviços
+
 Documento único de cobrança (DUC) – Permite a geração de referências de autoliquidação. Disponível para serviços digitais on-line, mas também disponível como serviço off-line, e disponível para pagamento em qualquer uma das entidades cobradoras certificadas pelo IGCP;
 MBWay – Para pagamentos digitais imediatos através de dispositivo de comunicações móvel;
 Multibanco - Permite a emissão de referências para pagamento de serviços, através de homebanking ou na rede de serviços ATM. Método disponível para serviços digitais on-line, mas também disponível como serviço off-line, nas seguintes modalidades de uso:
@@ -94,4 +112,5 @@ Para quem está atualmente no estrangeiro e não tem conta no sistema financeiro
  
 
 Custos
+
 O serviço de pagamentos apresenta um custo que procura reflectir os encargos com a manutenção do serviço e não incorpora os encargos da operação financeira, o cálculo de utilização é baseado no volume de transacções cobradas e está descrito de forma detalhada no protocolo de adesão ao serviço.
