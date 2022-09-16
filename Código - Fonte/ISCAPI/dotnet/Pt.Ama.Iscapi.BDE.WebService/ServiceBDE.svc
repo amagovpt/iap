@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Pt.Ama.Iscapi.BDE.WebService.ServiceBDE" CodeBehind="ServiceBDE.svc.cs" %>

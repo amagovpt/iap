@@ -1,0 +1,6 @@
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\obj\Debug\Pt.Ama.Iscapi.BDE.WebService.csproj.CoreCompileInputs.cache
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\bin\Pt.Ama.Iscapi.BDE.WebService.dll.config
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\bin\Pt.Ama.Iscapi.BDE.WebService.dll
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\bin\Pt.Ama.Iscapi.BDE.WebService.pdb
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\obj\Debug\Pt.Ama.Iscapi.BDE.WebService.dll
+C:\Users\marco.p.pedro\Documents\IAPMEI.SistemaLicenciamentoIndustrial.BDE.WebService\obj\Debug\Pt.Ama.Iscapi.BDE.WebService.pdb

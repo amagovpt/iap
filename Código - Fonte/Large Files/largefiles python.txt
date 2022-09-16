@@ -1,0 +1,25 @@
+
+import uuid 
+from hashlib import sha1
+
+import requests
+
+
+def upload_document_simplified(request):
+
+    filename = 'path/to/file'
+    with open(filename, "rb") as f:
+        doc = f.read()
+    guid = uuid.uuid4()
+    hash_sha1 = sha1(doc).hexdigest()
+
+    headers = {
+        'hash': hash_sha1,
+        'id': str(guid)
+       
+    }
+    data = {
+        'document': doc,
+    }
+
+    r = requests.post(settings.IAP_HOST + settings.IAP_FILE_URL, files=data, headers=headers)
