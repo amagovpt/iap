@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ff56d530-a587-444b-a889-6cc1d9409671",
+		"name": "DadosGov Exemplo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload file",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "[API_KEY]",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "Empty File.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dados.gov.pt/api/1/datasets/[DATASET_ID]/upload/",
+					"protocol": "https",
+					"host": [
+						"dados",
+						"gov",
+						"pt"
+					],
+					"path": [
+						"api",
+						"1",
+						"datasets",
+						"[DATASET_ID]",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
